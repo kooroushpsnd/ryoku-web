@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import logo from "./assets/Logo.png"
+import logo from "./assets/logo.png"
 
 export default {
   name: 'App',
@@ -59,8 +59,8 @@ export default {
   .logo-background {
     display: inline-block;
     vertical-align: middle;
-    height: 160px;
-    margin: -10px;
+    height: 20px;
+    margin: 5px;
   }
 
   .box {
@@ -113,8 +113,7 @@ export default {
     }
 
     .logo-background {
-      height: 80px;
-      margin: -5px;
+      height: 11px;
     }
 
     .box {
