@@ -32,7 +32,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="css" scoped>
   body {
     margin: 0;
     height: 100vh;
@@ -101,10 +101,6 @@ export default {
     border-radius: 8px;
     font-size: 18px;
     display: inline-block;
-  }
-
-  .btn:hover {
-    background-color: #e68900;
   }
 
   @media (max-width: 768px) {

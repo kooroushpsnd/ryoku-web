@@ -1,5 +1,14 @@
-FROM nginx:stable-alpine
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY dist /usr/share/nginx/html/dist
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+# Stage 1: Build the Vue app using Node.js for development
+FROM node:18 as dev-stage
+
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+
+# Run the development server (npm run serve)
+CMD ["npm", "run", "serve"]
+
+# Expose the port that the development server runs on
+EXPOSE 8080
+
